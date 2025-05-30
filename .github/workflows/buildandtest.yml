@@ -1,0 +1,16 @@
+name: Build and test pipeline
+
+on:
+  push:
+    branches: 
+      - main
+
+jobs:
+  simple_build_and_test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build
+        run: npm run build
+      - name: Test
+        run: npm test
+    
